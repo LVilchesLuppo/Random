@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>la locura del indio de los muchos parametros</title>
+</head>
+
+<body>
+</body>
+<script type="text/javascript">
+    "use strict"
+    const max = function() {
+
+        let long = arguments[0];
+
+        for (let i = 0; i < arguments.length; i++) {
+            if (long < arguments[i]) {
+                long = arguments[i];
+            }
+        }
+        return long;
+    }
+
+    console.log(max(2, 4, 6, 85, 63, 1));
+
+    const add = (a,b ...theArgs) => {
+
+        console.log(arguments);
+
+        let sum = arguments[0];
+
+        for (let i = 0; i < arguments.length; i++) {
+            sum += arguments[i];
+        }
+
+        return sum;
+    };
+
+    console.log(add(2, 5, 7, 7, 3, 6, 7,679));
+
+</script>
+
+</html>

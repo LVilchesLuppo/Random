@@ -1,0 +1,57 @@
+#parrafo{
+  margin: 30px;
+  font-size: 29px;
+  padding: 10;
+  background: yellow;
+  background-size: 20px;
+  width: auto;
+  font-family: Verdana;
+
+}
+ .span{
+   font-family: cursive;
+   font-size: 80;
+   background-color: #FFFFFF;
+   font-size: 50px;
+ }
+
+ h1{
+   font-family: Tahoma;
+   font-size: 80px;
+   margin-left: auto;
+   margin: 40px;
+   background-color: #19D8A8;
+   display: block;
+ }
+ body{
+    background-image:url("gatito.jpg");
+
+ }
+.btn{
+  font-size: 48px;
+  background-size: contain;
+}
+.but-1{
+  background-color: red;
+  background-size: 10px 10px;
+  width: 20px;
+}
+
+.but-2{
+  background-color: blue;
+  background-image: url("pasto.jpg");
+}
+
+#probemos{
+  border: 6px solid red;
+  height: 50px;
+  margin: 50px;
+  margin-left: 200px;
+  padding: 20px;
+  width: 400px;
+  background-color: blue;
+}
+
+
+
+}

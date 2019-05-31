@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ajax Call</title>
+  </head>
+  <script type="text/javascript">
+    function loadDoc(){
+      var req  = new XMLHttpRequest();
+        req.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+          document.getElementById("demo").innerHTML = this.responseText;
+        }
+      };
+      req.open("GET", "http://api.icndb.com/jokes/random", true);
+      req.send();
+      return req;
+    }
+  </script>
+  <body>
+    <h1>Ajax w/js</h1>
+    <p id="demo">Let change this text right here</p>
+    <button type="button" onclick="loadDoc()" name="change">Click me to change text</button>
+  </body>
+</html>

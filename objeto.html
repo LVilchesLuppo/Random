@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Objetos</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var myFilm = new Object();
+      myFilm.director = "Benito Camela";
+      myFilm.year  ="2561";
+      myFilm.country = "Croatia";
+      myFilm["locura"] = "mucha";
+
+      function showProps (obj, objName){
+          var result = '';
+          for(var i in obj){
+            if(obj.hasOwnProperty(i)){
+              //esta propiedad pregunta si el objeto tiene esa propiedad
+              result+= objName + "." + i + "=" + obj[i] + "\n";
+            }
+          }
+          return result;
+        }
+      console.log(showProps(myFilm,"myFilm"));
+      document.write(showProps(myFilm,"myFilm"));
+
+      //otra forma loca de crear objetos
+
+      let altaPeli = {
+          año: "215",
+          director: "to3",
+      }
+
+      //una forma aun mas loca que implica una funcion
+
+      function peli(director,genero,estrella){
+          this.director = director;
+          this.genero  = genero;
+          this.estrella = estrella;
+      }
+
+      var laMomia =  new peli("Jonathan Rodriguez", "Terror Marxista", "tita");
+      var barcoDeAmor  = new peli("Norberto","Aventura acuatica","loco");
+
+      document.write(showProps(laMomia,"laMomia"));
+
+    </script>
+  </body>
+</html>
